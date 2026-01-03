@@ -60,3 +60,6 @@ for node in world["nodes"]:
 if st.button("Sync to GitHub (Commit World)"):
     os.system("git add . && git commit -m 'Update dream world' && git push")
     st.success("Synced!")
+    def find_merge(part1, part2):
+    merge_prompt = f"Merge these two dream stories into one cohesive new fragment, keeping surreal elements: Story1: {part1} Story2: {part2}"
+    return llm.invoke(merge_prompt)
